@@ -47,10 +47,10 @@ button {
 }
 /* main styles */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  min-height: 1450px;
+  height: 100vh;
 }
 .cards-container {
   /* display: grid;
@@ -58,12 +58,13 @@ main {
   grid-template-rows: 1fr; */
   max-width: 87%;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
 }
 .card {
   padding: 3.25rem;
+  max-width: 327px;
 }
-.card h2 {
+.card h1 {
   color: var(--clr-very-light-gray);
   margin-top: 1.6rem;
   font-size: var(--fs-big);
@@ -88,12 +89,11 @@ main {
   background-color: var(--clr-very-dark-cyan);
   color: var(--clr-very-dark-cyan);
 }
-h1 {
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-}
+
 @media screen and (min-width: 700px) {
+  main {
+    min-height: auto;
+  }
   .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
