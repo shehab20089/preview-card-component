@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* ******************************************************** */
+/* css variables */
+/* ******************************************************** */
+:root {
+  /* colors */
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+  /* font sizes */
+  --fs-big: 2.5rem;
+  --fs-mid: 1.5rem;
+  --fs-small: 1rem;
+  /* Font Family */
+  --ff-font-headers: "Big Shoulders Display", cursive;
+  --ff-font-normal: "Lexend Deca", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  color: inherit;
+}
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--clr-very-light-gray);
+  font-family: var(--ff-font-normal);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-transparent-white);
+}
+button {
+  outline: none;
+  font-size: inherit;
+  border: none;
+  padding: 1em 2.3em;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+}
+/* main styles */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.cards-container {
+  /* display: grid;
+  
+  grid-template-rows: 1fr; */
+  max-width: 87%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card {
+  padding: 3.25rem;
+}
+.card h2 {
+  color: var(--clr-very-light-gray);
+  margin-top: 1.6rem;
+  font-size: var(--fs-big);
+  font-family: var(--ff-font-headers);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card p {
+  line-height: 1.7;
+  margin-top: 1.4rem;
+  color: var(--clr-transparent-white);
+}
+.card:first-of-type {
+  background-color: var(--clr-bright-orange);
+  color: var(--clr-bright-orange);
+}
+.card:nth-last-of-type(2) {
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-dark-cyan);
+}
+.card:last-of-type {
+  background-color: var(--clr-very-dark-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+h1 {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+@media screen and (min-width: 700px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 920px;
+  }
+  button {
+    margin-top: 5.5rem;
+  }
+}
